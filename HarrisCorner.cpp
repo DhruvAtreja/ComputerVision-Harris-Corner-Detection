@@ -56,9 +56,7 @@ void myHarris_function( int, void* )
 {
   myHarris_copy = src.clone();
 
-  if( myHarris_qualityLevel < 1 ) { myHarris_qualityLevel = 1; }
-
-  for( int j = 0; j < src_gray.rows; j++ )
+   for( int j = 0; j < src_gray.rows; j++ )
      { for( int i = 0; i < src_gray.cols; i++ )
           {
             if( Mc.at<float>(j,i) > myHarris_minVal + ( myHarris_maxVal - myHarris_minVal )*myHarris_qualityLevel/max_qualityLevel )
